@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+          
+       <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TheiaTimeGraphDataProviderView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.tgview"
+            name="Theia Data Provider Time Graph View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.NodeNextTickXYView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.nexttick.dataprovider.xyview"
+            name="Node Nexttick Queue"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.NodeTimeGraphView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.tgview"
+            name="Node Time Graph View"
+            restorable="true">
+      </view>
+    
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TickLatencyXYChart"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.tick.dataprovider.xyview"
+            name="Tick Latency XY View"
+            restorable="true">
+      </view>
+       <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.ThreadPoolView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.pool.dataprovider.xyview"
+            name="Thread Pool Monitor"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TimerXYChart"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.timer.dataprovider.xyview"
+            name="Timers Latency XY View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TickFrequencyXYChart"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.freq.dataprovider.xyview"
+            name="Tick Frequency XY View"
+            restorable="true">
+      </view>
+       <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TheiaXYDataProviderView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.xyview"
+            name="Theia Data Provider XY chart View"
+            restorable="true">
+      </view>
+       <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.TheiaBackendXYDataProviderView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.backend.dataprovider.xyview"
+            name="Theia Backend XY chart View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.NodePromisesXYDataProviderView"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.promises.dataprovider.xyview"
+            name="Node Promises XY View"
+            restorable="true">
+      </view>
+      <view
+            category="org.eclipse.tracecompass.incubator.theia.ui.views.category"
+            class="org.eclipse.tracecompass.incubator.theia.ui.views.data.provider.PromiseQueueXYChart"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.promisequeue.dataprovider.xyview"
+            name="Promise Queue XY View"
+            restorable="true">
+      </view>
+      
+   </extension>
+    <extension
+         point="org.eclipse.linuxtools.tmf.core.analysis">
+      <module
+         id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module"
+         name="Theia State System Module"
+         applies_experiment="true"
+         analysis_module="org.eclipse.tracecompass.incubator.theia.ui.core.analysis.TheiaStateSystemAnalysisModule"
+         automatic="true">
+         <tracetype
+               class="org.eclipse.tracecompass.tmf.core.trace.TmfTrace">
+         </tracetype>
+      </module>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.tgview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.nexttick.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.tick.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+       <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.timer.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.pool.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.freq.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.backend.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="org.eclipse.tracecompass.incubator.theia.ui.views.promisequeue.dataprovider.xyview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      <output
+            class="org.eclipse.tracecompass.tmf.ui.analysis.TmfAnalysisViewOutput"
+            id="rg.eclipse.tracecompass.incubator.theia.ui.views.dataprovider.tgview">
+         <analysisId
+               id="org.eclipse.tracecompass.incubator.theia.ui.state.system.module">
+         </analysisId>
+      </output>
+      
+
+   </extension>
+   <extension point="org.eclipse.tracecompass.tmf.core.dataprovider">
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.TheiaTimeGraphProviderFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.timegraph.dataprovider">
+      </dataProviderFactory>
+       <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.TheiaBackendXYDataProviderFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.backend.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.TickLatencyFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.tick.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.TickFrequencyFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.freq.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.TimerFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.timer.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.ThreadPoolFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.pool.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.PromiseQueueFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.promisequeue.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.SpanLifeDataProviderFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.timegraph.async.dataprovider">
+      </dataProviderFactory>
+      <dataProviderFactory
+         class="org.eclipse.tracecompass.incubator.theia.ui.core.data.provider.NodeNextTickFactory"
+         id="org.eclipse.tracecompass.incubator.theia.ui.xy.nexttick.dataprovider">
+      </dataProviderFactory>
+   </extension>
+
+</plugin>

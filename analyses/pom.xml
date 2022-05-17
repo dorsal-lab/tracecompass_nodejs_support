@@ -48,6 +48,7 @@
     <module>org.eclipse.tracecompass.incubator.rocm</module>
     <module>org.eclipse.tracecompass.incubator.rocm.core</module>
     <module>org.eclipse.tracecompass.incubator.rocm.core.tests</module>
+    <module>org.eclipse.tracecompass.incubator.theia.ui</module>
     <!-- insert modules here -->
   </modules>
 
